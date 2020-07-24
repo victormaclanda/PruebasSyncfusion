@@ -1,11 +1,13 @@
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { GridModule } from '@syncfusion/ej2-angular-grids';
-import { MenuModule } from '@syncfusion/ej2-angular-navigations';
+import { AutoCompleteModule } from 'primeng/autocomplete';
 
 @NgModule({
   declarations: [
@@ -13,8 +15,10 @@ import { MenuModule } from '@syncfusion/ej2-angular-navigations';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    MenuModule
+    BrowserAnimationsModule,
+    AutoCompleteModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
